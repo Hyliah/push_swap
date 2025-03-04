@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/04 17:18:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/04 18:34:48 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct s_list
+typedef struct s_stack
 {
     int             nb;
-    struct s_list   *next;
-}   t_list;
+    struct s_stack   *next;
+}   t_stack;
 
 #endif
