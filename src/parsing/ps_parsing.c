@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:51:16 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 21:48:03 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/05 22:30:11 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,9 @@ void ps_parsing(int ac, char **av, t_stack *stack_a)
 	long    value;
 	int     i;
 	int		j;
-	t_node	new_node;
+	t_node	*new_node;
 
 	i = 0;
-	
 	while (i < ac - 1)
 	{
 		if (!is_valid_argument(av[i]))
@@ -87,11 +86,11 @@ void ps_parsing(int ac, char **av, t_stack *stack_a)
 			if  (!is_different(stack_a, value))
 				ft_free(&stack_a);
 			new_node = create_node((int)value);
-			insert_node_front(stack_a, )
+			if(!new_node)
+				ft_free(&stack_a);
+			insert_node_back(stack_a, new_node);
 			j++;
 		}
 		i++;       
 	}
 }
-
-
