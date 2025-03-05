@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 00:58:45 by hlichten         ###   ########.fr       */
+/*   Created: 2024/09/28 00:16:30 by hlichten          #+#    #+#             */
+/*   Updated: 2024/10/19 18:41:31 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h> //int min & max macros
-
-typedef struct s_stack
+int	ft_isascii(int c)
 {
-    int				value;
-	int				index;
-	int				push_cost;
-	int				top_median;
-	int				cheapest;
-	
-    struct s_stack	*next;
-    struct s_stack	*prev;
-	struct s_stack	*target_node;
-    
-}   t_stack; // petit nom sympa qui permet d utiliser sans -> struct <- s_stack
-
-#endif
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
+/*
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main(int ac, char **av)
+{
+    (void)ac;
+    printf("%d \n", isascii(atoi(av[1])));
+    printf("%d \n", ft_isascii(atoi(av[1])));
+ 
+    return 0;
+}*/

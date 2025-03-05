@@ -1,14 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split_ps.c                                      :+:      :+:    :+:   */
+/*   ft _calloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 23:21:00 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 01:00:23 by hlichten         ###   ########.fr       */
+/*   Created: 2024/10/13 20:03:28 by hlichten          #+#    #+#             */
+/*   Updated: 2024/10/19 18:40:43 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//refaire le split mais avec un static 
+#include "libft.h"
 
+void	*ft_calloc(size_t count, size_t size)
+{
+	unsigned int	i;
+	char			*str;
+
+	i = count * size;
+	str = (char *)malloc(sizeof(char) * (i));
+	if (!str)
+		return (NULL);
+	ft_bzero(str, i);
+	return (str);
+}

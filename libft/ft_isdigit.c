@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:16:20 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 00:04:29 by hlichten         ###   ########.fr       */
+/*   Created: 2024/09/27 21:27:58 by hlichten          #+#    #+#             */
+/*   Updated: 2024/10/19 18:43:41 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int ac, char **av)
+int	ft_isdigit(int c)
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
-
-	stack_a = NULL;
-	stack_b = NULL;
-
-	if (ac > 1)
-	{
-
-	}
-	else
-		ft_error();
-    
+	if (c >= 48 && c <= 57)
+		return (1);
 	return (0);
 }
-
-// verification des entrées : que des int et pas ac<1 
-// 1ere finction qui determine le plus petit et le plus grand nombre de la pile A 
-// & le nombre d'éléments disponible dans la pile d entrée A 
-
-//------------- liste fonctions ---------
-
-
-
-
+/*
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main(int ac, char **av)
+{
+    (void)ac;
+    printf("%d \n", isdigit(atoi(av[1])));
+    printf("%d \n", ft_isdigit(atoi(av[1])));
+ 
+    return 0;
+}*/

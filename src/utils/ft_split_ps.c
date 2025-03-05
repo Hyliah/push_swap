@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   manage_list.c                                      :+:      :+:    :+:   */
+/*   ft_split_ps.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 00:59:47 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 01:00:16 by hlichten         ###   ########.fr       */
+/*   Created: 2025/03/04 23:21:00 by hlichten          #+#    #+#             */
+/*   Updated: 2025/03/05 17:48:58 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    clear_list(void) //ex06
-{
-    // suppression de la liste et de tous les noeuds et malloc
-    // free
-}
+#include "push_swap.h"
+
+//refaire le split mais avec un static ???
