@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap2.c                                            :+:      :+:    :+:   */
+/*   op_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:17:03 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/04 18:34:25 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/05 01:00:08 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void    ra(t_stack *stack_a, t_stack *stack_b)
 {
-    // ra (rotate a) : 
-    // Décale d’une position vers le haut tous les élements de la pile a.
-    // Le premier élément devient le dernier.
-    ft_printf("ra\n");
+	// ra (rotate a) : 
+	// Décale d’une position vers le haut tous les élements de la pile a.
+	// Le premier élément devient le dernier.
+	ft_printf("ra\n");
 }
 
 void    rb(t_stack *stack_a, t_stack *stack_b)
 {
-    // rb (rotate b) : 
-    // Décale d’une position vers le haut tous les élements de la pile b.
-    // Le premier élément devient le dernier.
-    ft_printf("rb\n");
+	// rb (rotate b) : 
+	// Décale d’une position vers le haut tous les élements de la pile b.
+	// Le premier élément devient le dernier.
+	ft_printf("rb\n");
 }
 
 void    rr(t_stack *stack_a, t_stack *stack_b)
 {
-    // rr : ra et rb en même temps.
-    ft_printf("rr\n");
+	// rr : ra et rb en même temps.
+	ft_printf("rr\n");
 }

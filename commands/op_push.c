@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   op_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 17:16:20 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 00:04:29 by hlichten         ###   ########.fr       */
+/*   Created: 2025/03/04 22:45:21 by hlichten          #+#    #+#             */
+/*   Updated: 2025/03/05 01:13:13 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	pa(t_stack *stack_a, t_stack *stack_b)
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
-
-	stack_a = NULL;
-	stack_b = NULL;
-
-	if (ac > 1)
-	{
-
-	}
-	else
-		ft_error();
-    
-	return (0);
+    // pa (push a) : 
+    // Prend le premier élément au sommet de b et le met sur a.
+    // Ne fait rien si b est vide.
+	ft_printf("pa\n");
 }
 
-// verification des entrées : que des int et pas ac<1 
-// 1ere finction qui determine le plus petit et le plus grand nombre de la pile A 
-// & le nombre d'éléments disponible dans la pile d entrée A 
-
-//------------- liste fonctions ---------
-
-
-
-
+void	pb(t_stack *stack_a, t_stack *stack_b)
+{
+    // pb (push b) : 
+    // Prend le premier élément au sommet de a et le met sur b.
+    // Ne fait rien si a est vide.
+	ft_printf("pb\n");
+}
