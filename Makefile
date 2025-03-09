@@ -23,7 +23,8 @@ vpath %.c \
 	$(SRCDIR) \
 	$(SRCDIR)/lists_utils \
 	$(SRCDIR)/parsing \
-	$(SRCDIR)/utils
+	$(SRCDIR)/utils \
+	$(SRCDIR)/commands
 
 # Sources and object files
 SRC = push_swap.c \
@@ -33,6 +34,7 @@ SRC = push_swap.c \
 	manage_list.c \
 	handle_errors.c  \
 	debugs.c \
+	basic_sort.c \
 	#op_push.c \
 	op_rev_rotate.c \
 	op_rotate.c \

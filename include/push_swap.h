@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 17:40:46 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 19:36:14 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,6 @@ typedef struct s_node
 {
     int				value;
 	int				index;
-	int				push_cost;
-	t_bool			top_median; // 1 si va aller en haut 
-	t_bool			cheapest; // 1 est le moins couteux a deplacer
-	struct s_node	*target_node;
 	
     struct s_node	*next;
     struct s_node	*prev;
@@ -59,7 +55,8 @@ void    init_list(t_stack *stack);
 t_node  *create_node(int value);
 void	insert_node_front(t_stack *stack, t_node *new_node);
 void    insert_node_back(t_stack *stack, t_node *new_node) ;
-
-
+void	ps_bubblesort(t_stack *stack);
+void	swap_index(t_node *a, t_node *b);
 void	print_lists(t_stack *stack);
+
 #endif

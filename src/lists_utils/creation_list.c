@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:31:09 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 17:26:58 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 20:01:25 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,6 @@ t_node   *create_node(int value)
 	ft_memset(new_node, 0, sizeof(t_node));
 	new_node->value = value;
 	new_node->index = 0;
-	new_node->push_cost = 0;
-	new_node->top_median = FALSE;
-	new_node->cheapest = FALSE;
-	new_node->target_node = NULL;
-	new_node->next = NULL;
-	new_node->prev = NULL;
 	return (new_node);
 }
 
@@ -55,5 +49,6 @@ void    insert_node_back(t_stack *stack, t_node *new_node) // que a l initalisat
 			current = current->next;
 		current->next = new_node;
 		new_node->prev = current;
+		new_node->index = new_node->prev->index + 1;
 	}
 }

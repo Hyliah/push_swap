@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:20 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 18:25:36 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 19:39:08 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int ac, char **av)
 		init_list(&stack_b);
 		ps_parsing(ac, ++av, &stack_a);
 		if (DEBUG_MODE)
+			print_lists(&stack_a);
+		ps_bubblesort(&stack_a);
 			print_lists(&stack_a);
 	}
 	// else

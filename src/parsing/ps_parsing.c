@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:51:16 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 18:26:28 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 20:00:12 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,4 @@ void ps_parsing(int ac, char **av, t_stack *stack_a)
 		}
 		i++;  
 	}
-
 }
