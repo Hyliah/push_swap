@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 19:36:14 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 22:58:24 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ void    init_list(t_stack *stack);
 t_node  *create_node(int value);
 void	insert_node_front(t_stack *stack, t_node *new_node);
 void    insert_node_back(t_stack *stack, t_node *new_node) ;
-void	ps_bubblesort(t_stack *stack);
-void	swap_index(t_node *a, t_node *b);
+void	ps_assign_index(t_stack *stack);
 void	print_lists(t_stack *stack);
 
 #endif
