@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 22:44:28 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 21:19:46 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 17:39:02 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
-int		ft_atol(const char *str);
+long	ft_atol(const char *str);
 int		ft_strlen(const char *str);
 char	*ft_strdup(const char *s1);
 void	ft_putnbr_fd(int n, int fd);

@@ -6,13 +6,13 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 21:17:25 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/05 22:14:04 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/09 17:38:55 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	int		i;
 	int		neg;

@@ -26,9 +26,20 @@ vpath %.c \
 	$(SRCDIR)/utils
 
 # Sources and object files
-SRC = main.c utils.c input_check.c stack.c mv_rot.c mv_rev_rot.c mv_swap.c mv_push.c mv_combined.c small_sort.c # mettre a jour les fichiers
-OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
+SRC = push_swap.c \
+	utils.c \
+	ps_parsing.c \
+	creation_list.c \
+	manage_list.c \
+	handle_errors.c  \
+	debugs.c \
+	#op_push.c \
+	op_rev_rotate.c \
+	op_rotate.c \
+	op_swap.c
 
+OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
+#mini_swap.c
 all: $(LIBFT) $(PRINTF) $(NAME)
 
 $(LIBFT):
