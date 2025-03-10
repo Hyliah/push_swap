@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   basic_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:08:55 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 22:58:12 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/10 23:32:22 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,21 @@ void ps_assign_index(t_stack *stack) //fonctionne pas sur nb impair
 	}
 }
 
-// int is_sorted(t_stack stack)
-// {
-//     // if is_sorted return 0
-//     // else return 1
-//     // while stack
-//     //if (stack->value > stack->next->value)
-//     //return 0
-// }
+void	send_to_function(t_stack *stack_a, t_stack *stack_b)
+{
+	int	size;
+
+	size = stack_a->cnt_node;
+	if (size == 1)
+		end_program(stack_a, stack_b);
+	else if (size == 2)
+		swap_2(stack_a);
+	else if (size == 3)
+		swap_3(stack_a, stack_b);
+	else if (size == 4)
+		swap_4(stack_a, stack_b);
+	else if (size == 5)
+		swap_5(stack_a, stack_b);
+	else if (size > 5)
+	;
+}

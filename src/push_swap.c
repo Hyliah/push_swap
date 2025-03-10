@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:20 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 22:58:43 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/11 00:01:40 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ int	main(int ac, char **av)
 	{
 		init_list(&stack_a);
 		init_list(&stack_b);
-		ps_parsing(ac, ++av, &stack_a);
-		if (DEBUG_MODE)
-			print_lists(&stack_a);
+		ps_parsing(++av, &stack_a);
+		// if (DEBUG_MODE)
+		// 	print_lists(&stack_a);
 		ps_assign_index(&stack_a);
 		if (DEBUG_MODE)
 			print_lists(&stack_a);
+		send_to_function(&stack_a, &stack_b);
+		print_lists(&stack_a);
 	}
 	// else
 	// 	ft_error();

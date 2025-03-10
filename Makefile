@@ -1,4 +1,3 @@
-
 # nom de l'executable
 NAME = push_swap
 
@@ -32,10 +31,11 @@ SRC = push_swap.c \
 	ps_parsing.c \
 	creation_list.c \
 	manage_list.c \
-	handle_errors.c  \
+	mini_swap.c \
+	exit_and_errors.c  \
 	debugs.c \
 	basic_sort.c \
-	#op_push.c \
+	op_push.c \
 	op_rev_rotate.c \
 	op_rotate.c \
 	op_swap.c

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:57 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/09 16:36:28 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/10 21:05:32 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void    sa(t_stack *stack_a, t_stack *stack_b)
 {
+	(void)stack_a;
+	(void)stack_b;
 	// sa (swap a) : 
 	// Intervertit les 2 premiers éléments au sommet de la pile a.
 	// Ne fait rien s’il n’y en a qu’un ou aucun.
@@ -22,6 +24,8 @@ void    sa(t_stack *stack_a, t_stack *stack_b)
 
 void    sb(t_stack *stack_a, t_stack *stack_b)
 {
+	(void)stack_a;
+	(void)stack_b;
 	// sb (swap b ) : 
 	// Intervertit les 2 premiers éléments au sommet de la pile b.
 	// Ne fait rien s’il n’y en a qu’un ou aucun.
@@ -30,6 +34,8 @@ void    sb(t_stack *stack_a, t_stack *stack_b)
 
 void    ss(t_stack *stack_a, t_stack *stack_b)
 {
+	(void)stack_a;
+	(void)stack_b;
 	// ss : sa et sb en même temps.
 	ft_printf("ss\n");
 }
