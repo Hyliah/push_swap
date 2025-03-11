@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/10 23:55:20 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/11 18:25:22 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ typedef struct s_stack
 t_node  *create_node(int value);
 
 void    ra(t_stack *stack_a);
+void    sa(t_stack *stack_a);
+void    rra(t_stack *stack_a);
 void	swap_2(t_stack *stack_a);
 void    ft_free(t_stack **stack);
 void    init_list(t_stack *stack);
