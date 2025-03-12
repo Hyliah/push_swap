@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   basic_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:08:55 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/10 23:32:22 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:32:04 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void	send_to_function(t_stack *stack_a, t_stack *stack_b)
 		swap_4(stack_a, stack_b);
 	else if (size == 5)
 		swap_5(stack_a, stack_b);
-	else if (size > 5)
-	;
+	else
+	radix(stack_a, stack_b);
 }

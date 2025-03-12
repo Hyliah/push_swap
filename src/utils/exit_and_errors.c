@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_and_errors.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 17:48:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/10 23:30:55 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:56:50 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,3 @@ void end_program(t_stack *sa, t_stack *sb)
 	//ft_free
 	exit(EXIT_SUCCESS);
 }
-
-// utilisation des mallocs : creation node, create_value->strndup, 
-// utiliser la delete list de manage_lists

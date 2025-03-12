@@ -3,7 +3,7 @@ NAME = push_swap
 
 # Source and object diretories
 SRCDIR = src
-OBJDIR = $(SRCDIR)
+OBJDIR = obj
 
 # Librairies
 LIBFTDIR = ./libft
@@ -27,18 +27,16 @@ vpath %.c \
 
 # Sources and object files
 SRC = push_swap.c \
-	utils.c \
 	ps_parsing.c \
 	creation_list.c \
 	manage_list.c \
 	mini_swap.c \
 	exit_and_errors.c  \
 	debugs.c \
+	radix.c \
 	basic_sort.c \
 	op_push.c \
-	op_rev_rotate.c \
-	op_rotate.c \
-	op_swap.c
+	op_rotate_swap.c \
 
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 #mini_swap.c

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ps_parsing.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:51:16 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/10 22:31:11 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:58:22 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_bool is_different(t_node *node, long value)
+t_bool	is_different(t_node *node, long value)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = node;
 	while (tmp != NULL)
@@ -43,7 +43,7 @@ t_bool	is_valid_argument(char *arg)
 
 char	*create_value(char *arg, t_stack *stack_a, int *j)
 {
-	char		*value;
+	char	*value;
 
 	value = NULL;
 	while(arg[*j])
@@ -67,12 +67,11 @@ char	*create_value(char *arg, t_stack *stack_a, int *j)
 	return (NULL);
 }
 
-
-void ps_parsing(char **av, t_stack *stack_a)
+void	ps_parsing(char **av, t_stack *stack_a)
 {
 	char	*str;
-	long    value;
-	int     i;
+	long	value;
+	int		i;
 	int		j;
 	t_node	*new_node;
 
