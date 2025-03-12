@@ -33,5 +33,6 @@ print(" ".join(map(str, numbers)))
 
 # leaks: valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt ./push_swap $(python3 rand_number.py 500)
 #ARG=$(python3 rand_number.py 4); ./push_swap $ARG | ./checker_linux $ARG
+#ARG=$(python3 ./autre/rand_number.py 4); ./push_swap $ARG | ./autre/checker_linux $ARG
 #ARG=$(python3 rand_number.py 4); ./push_swap $ARG | wc -l
 #./push_swap $(python3 rand_number.py 3) 

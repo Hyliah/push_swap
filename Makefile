@@ -32,7 +32,6 @@ SRC = push_swap.c \
 	manage_list.c \
 	mini_swap.c \
 	exit_and_errors.c  \
-	debugs.c \
 	radix.c \
 	basic_sort.c \
 	op_push.c \

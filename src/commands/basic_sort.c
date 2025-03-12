@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:08:55 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 21:16:24 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 21:20:04 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	send_to_function(t_stack *stack_a, t_stack *stack_b)
 
 	size = stack_a->cnt_node;
 	if (size == 1)
-		end_program(stack_a, stack_b);
+		end_program(stack_a);
 	else if (size == 2)
 		swap_2(stack_a);
 	else if (size == 3)

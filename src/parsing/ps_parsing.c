@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:51:16 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 21:19:08 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 21:29:09 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,3 +99,37 @@ void	ps_parsing(char **av, t_stack *stack_a)
 		i++;
 	}
 }
+
+// void	handle_value(char *str, t_stack *stack_a)
+// {
+// 	long	value;
+// 	svalue = ft_atol(str);
+// 	free(str);
+// 	if (value > INT_MAX || value < INT_MIN || !is_different(stack_a->head, value))
+// 		ft_exit_success(stack_a);
+// 	t_node *new_node = create_node((int)value);
+// 	if (!new_node)
+// 		ft_free(stack_a);
+// 	insert_node_back(stack_a, new_node);
+// }
+
+// void	ps_parsing(char **av, t_stack *stack_a)
+// {
+// 	int i = 0, j;
+// 	char *str;
+
+// 	while (av[i] && av[i][0])
+// 	{
+// 		if (!is_valid_argument(av[i]))
+// 			ft_exit_success(stack_a);
+// 		j = 0;
+// 		while (av[i][j])
+// 		{
+// 			str = create_value(av[i], stack_a, &j);
+// 			if (!(*str))
+// 				ft_exit_failure(stack_a);
+// 			handle_value(str, stack_a);
+// 		}
+// 		i++;
+// 	}
+// }
