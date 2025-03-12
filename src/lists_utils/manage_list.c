@@ -6,17 +6,11 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 00:59:47 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 20:07:01 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:55:59 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	clear_list(void)
-{
-	// suppression de la liste et de tous les noeuds et malloc
-	// free
-}
 
 int	find_max(t_stack *stack)
 {

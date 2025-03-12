@@ -6,13 +6,13 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:08:55 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 19:32:04 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 21:16:24 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ps_assign_index(t_stack *stack) //fonctionne pas sur nb impair
+void	ps_assign_index(t_stack *stack)
 {
 	int		count;
 	t_node	*current;
@@ -50,5 +50,5 @@ void	send_to_function(t_stack *stack_a, t_stack *stack_b)
 	else if (size == 5)
 		swap_5(stack_a, stack_b);
 	else
-	radix(stack_a, stack_b);
+		radix(stack_a, stack_b);
 }

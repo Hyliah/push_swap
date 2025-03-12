@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:31:09 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 20:05:15 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:48:42 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,6 @@ t_node	*create_node(int value)
 	ft_memset(new_node, 0, sizeof(t_node));
 	new_node->value = value;
 	return (new_node);
-}
-
-void	insert_node_front(t_stack *stack, t_node *new_node)
-{
-	if (!new_node || !stack)
-		return ;
-	new_node->next = stack->head;
-	if (stack->head)
-		stack->head->prev = new_node;
 }
 
 void	insert_node_back(t_stack *stack, t_node *new_node)

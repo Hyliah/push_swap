@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 16:51:16 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 19:58:22 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 21:19:08 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_bool	is_valid_argument(char *arg)
 	i = 0;
 	while (arg[i])
 	{
-		if (!ft_isdigit(arg[i]) && arg[i] != ' ' 
+		if (!ft_isdigit(arg[i]) && arg[i] != ' '
 			&& arg[i] != '-' && arg[i] != '+')
 			return (FALSE);
 		i++;
@@ -46,23 +46,22 @@ char	*create_value(char *arg, t_stack *stack_a, int *j)
 	char	*value;
 
 	value = NULL;
-	while(arg[*j])
+	while (arg[*j])
 	{
-		while(arg[*j] == ' ')
+		while (arg[*j] == ' ')
 			(*j)++;
 		value = arg + *j;
-		if(arg[*j] == '+' || arg[*j] == '-')
+		if (arg[*j] == '+' || arg[*j] == '-')
 		{
 			if (!ft_isdigit(arg[*j + 1]))
 				ft_exit_success(stack_a);
-				//ft_free(&stack_a);
 			(*j)++;
 		}
-		while(ft_isdigit(arg[*j]))
+		while (ft_isdigit(arg[*j]))
 			(*j)++;
-		while(arg[*j] == ' ')
+		while (arg[*j] == ' ')
 			(*j)++;
-		return(ft_strndup(value, arg + *j - value));
+		return (ft_strndup(value, arg + *j - value));
 	}
 	return (NULL);
 }
@@ -80,25 +79,23 @@ void	ps_parsing(char **av, t_stack *stack_a)
 	{
 		if (!is_valid_argument(av[i]))
 			ft_exit_success(stack_a);
-			//ft_free(&stack_a); // check si les arg valides sinon on free
 		j = 0;
 		while (av[i][j])
 		{
 			str = create_value(av[i], stack_a, &j);
-			if(!(*str))
-				return ;
-			value = ft_atol(str); // char devient integer 
+			if (!(*str))
+				ft_exit_failure(stack_a);
+			value = ft_atol(str);
+			free(str);
 			if (value > INT_MAX || value < INT_MIN)
 				ft_exit_success(stack_a);
-				//ft_free(&stack_a);
-			if  (!is_different(stack_a->head, value))
+			if (!is_different(stack_a->head, value))
 				ft_exit_success(stack_a);
-				//ft_free(&stack_a);
 			new_node = create_node((int)value);
-			if(!new_node)
-				ft_free(&stack_a);
+			if (!new_node)
+				ft_free(stack_a);
 			insert_node_back(stack_a, new_node);
 		}
-		i++;  
+		i++;
 	}
 }

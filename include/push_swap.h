@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 20:02:54 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:56:05 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,14 @@ int		find_placement(t_stack *stack, int index);
 void	ra(t_stack *stack_a);
 void	sa(t_stack *stack_a);
 void	rra(t_stack *stack_a);
+void	ft_free(t_stack *stack);
 void	swap_2(t_stack *stack_a);
-void	ft_free(t_stack **stack);
 void	init_list(t_stack *stack);
 void	print_lists(t_stack *stack);
-void	ft_exit_success(t_stack *sa);
-void	ft_exit_failure(t_stack *sa);
+void	end_program(t_stack *stack_a);
 void	ps_assign_index(t_stack *stack);
-void	end_program(t_stack *sa, t_stack *sb);
+void	ft_exit_success(t_stack *stack_a);
+void	ft_exit_failure(t_stack *stack_a);
 void	pa(t_stack *stack_a, t_stack *stack_b);
 void	pb(t_stack *stack_a, t_stack *stack_b);
 void	ps_parsing(char **av, t_stack *stack_a);
@@ -72,7 +72,6 @@ void	swap_4(t_stack *stack_a, t_stack *stack_b);
 void	swap_5(t_stack *stack_a, t_stack *stack_b);
 void	update_min_max(t_stack *stack_a, t_stack *stack_b);
 void	insert_node_back(t_stack *stack, t_node *new_node);
-void	insert_node_front(t_stack *stack, t_node *new_node);
 void	send_to_function(t_stack *stack_a, t_stack *stack_b);
 
 #endif
