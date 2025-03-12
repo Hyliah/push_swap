@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/11 18:25:22 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 02:02:42 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,17 @@ typedef struct s_node
 
 typedef struct s_stack
 {
-	int		inedx_min;
-	int		index_max;
+	int		idx_min;
+	int		idx_max;
 	int		cnt_node;
 	t_node	*head;
 }	t_stack;
 
 
 t_node  *create_node(int value);
+
+int		find_min(t_stack *stack);
+int		find_max(t_stack *stack);
 
 void    ra(t_stack *stack_a);
 void    sa(t_stack *stack_a);
@@ -64,6 +67,8 @@ void 	ft_exit_success(t_stack *sa);
 void 	ft_exit_failure(t_stack *sa);
 void	ps_assign_index(t_stack *stack);
 void 	end_program(t_stack *sa, t_stack *sb);
+void	pa(t_stack *stack_a, t_stack *stack_b);
+void	pb(t_stack *stack_a, t_stack *stack_b);
 void	ps_parsing(char **av, t_stack *stack_a);
 void	swap_3(t_stack *stack_a, t_stack *stack_b);
 void	swap_4(t_stack *stack_a, t_stack *stack_b);

@@ -6,12 +6,19 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:31:09 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/10 21:36:41 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 00:58:35 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void    init_list(t_stack *stack)
+{
+    stack->head = NULL;
+    stack->cnt_node = 0;
+    stack->idx_max = 0;
+    stack->idx_min = 0;
+}
 t_node   *create_node(int value)
 {
 	t_node *new_node;

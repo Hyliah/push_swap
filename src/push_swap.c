@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:20 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/11 00:01:40 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/12 02:17:23 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,14 @@ int	main(int ac, char **av)
 		ps_assign_index(&stack_a);
 		if (DEBUG_MODE)
 			print_lists(&stack_a);
-		send_to_function(&stack_a, &stack_b);
+			print_lists(&stack_b);
+		// send_to_function(&stack_a, &stack_b);
+		// print_lists(&stack_a);
+		// print_lists(&stack_b);
+		find_max(&stack_a);
+		find_min(&stack_a);
 		print_lists(&stack_a);
+		print_lists(&stack_b);
 	}
 	// else
 	// 	ft_error();
