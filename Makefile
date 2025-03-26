@@ -36,6 +36,7 @@ SRC = push_swap.c \
 	basic_sort.c \
 	op_push.c \
 	op_rotate_swap.c \
+	parsing_utils.c \
 
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 #mini_swap.c
