@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:16:46 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/26 17:16:34 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/30 16:00:30 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	radix(t_stack *stack_a, t_stack *stack_b);
 void	swap_3(t_stack *stack_a, t_stack *stack_b);
 void	swap_4(t_stack *stack_a, t_stack *stack_b);
 void	swap_5(t_stack *stack_a, t_stack *stack_b);
-void	check_int_diff(int value, t_stack *stack_a);
+void	check_int_diff(long value, t_stack *stack_a);
 void	check_valid_arg(char *arg, t_stack *stack_a);
 void	check_good(t_node *new_node, t_stack *stack_a);
 void	update_min_max(t_stack *stack_a, t_stack *stack_b);

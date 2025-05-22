@@ -1,7 +1,7 @@
-# nom de l'executable
+# Nom de l'exécutable
 NAME = push_swap
 
-# Source and object diretories
+# Dossiers source et objet
 SRCDIR = src
 OBJDIR = obj
 
@@ -11,63 +11,68 @@ LIBFT = $(LIBFTDIR)/libft.a
 PRINTFDIR = ./ft_printf
 PRINTF = $(PRINTFDIR)/libftprintf.a
 
-# Compiler and flags
+# Compilateur et options
 CC = gcc
 CFLAGS = -g3 -Wall -Wextra -Werror
 INCLUDE = -I include
 
-RM = rm -f 
+RM = rm -rf
 
 vpath %.c \
-	$(SRCDIR) \
-	$(SRCDIR)/lists_utils \
-	$(SRCDIR)/parsing \
-	$(SRCDIR)/utils \
-	$(SRCDIR)/commands
+    $(SRCDIR) \
+    $(SRCDIR)/lists_utils \
+    $(SRCDIR)/parsing \
+    $(SRCDIR)/utils \
+    $(SRCDIR)/commands
 
-# Sources and object files
+# Sources et fichiers objets
 SRC = push_swap.c \
-	ps_parsing.c \
-	creation_list.c \
-	manage_list.c \
-	mini_swap.c \
-	exit_and_errors.c  \
-	radix.c \
-	basic_sort.c \
-	op_push.c \
-	op_rotate_swap.c \
-	parsing_utils.c \
+    ps_parsing.c \
+    creation_list.c \
+    manage_list.c \
+    mini_swap.c \
+    exit_and_errors.c  \
+    radix.c \
+    basic_sort.c \
+    op_push.c \
+    op_rotate_swap.c \
+    parsing_utils.c \
 
 OBJS = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
-#mini_swap.c
-all: $(LIBFT) $(PRINTF) $(NAME)
+
+all: $(OBJDIR) $(LIBFT) $(PRINTF) $(NAME)
 
 $(LIBFT):
 	$(MAKE) all -C $(LIBFTDIR)
 
 $(PRINTF):
 	$(MAKE) all -C $(PRINTFDIR)
-	
-# Compile each .c file to .o		
-$(OBJDIR)/%.o: %.c
+
+# Compilation des fichiers objets
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-	
+
+# Création du dossier obj
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
+# Compilation de l'exécutable
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(PRINTF) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(PRINTF) -o $(NAME)
 
-# Rule to clean up object files	
+# Nettoyage des fichiers objets
 clean:
-		$(RM) $(OBJS)
-		$(MAKE) clean -C $(LIBFTDIR)
-		$(MAKE) clean -C $(PRINTFDIR)
+	$(RM) $(OBJS)
+	$(MAKE) clean -C $(LIBFTDIR)
+	$(MAKE) clean -C $(PRINTFDIR)
 
-#Rule to clean  up object files and the library
+# Nettoyage complet (fichiers objets + exécutable + dossier obj)
 fclean: clean
-		$(RM) $(NAME)
-		$(MAKE) fclean -C $(LIBFTDIR)
-		$(MAKE) fclean -C $(PRINTFDIR)
+	$(RM) $(NAME) $(OBJDIR)
+	$(MAKE) fclean -C $(LIBFTDIR)
+	$(MAKE) fclean -C $(PRINTFDIR)
 
-# Rule to recompile everything
+# Recompiler tout
 re: fclean all
 
 .PHONY: all clean fclean re

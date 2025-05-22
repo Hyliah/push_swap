@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:13:25 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/26 17:13:53 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/30 16:03:16 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	check_valid_arg(char *arg, t_stack *stack_a)
 		ft_exit_success(stack_a);
 }
 
-void	check_int_diff(int value, t_stack *stack_a)
+void	check_int_diff(long value, t_stack *stack_a)
 {
 	if (value > INT_MAX || value < INT_MIN)
 		ft_exit_success(stack_a);

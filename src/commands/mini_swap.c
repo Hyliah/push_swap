@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 17:41:14 by hlichten          #+#    #+#             */
-/*   Updated: 2025/03/12 20:09:50 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/03/27 19:53:50 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	swap_2(t_stack *stack_a)
 	if (stack_a->head->index == 1)
 		ra(stack_a);
 }
-	// if (stack_a->head->index == 0 && second->index == 1)
-	// 	end_program(s_a, s_b);
 
 void	swap_3(t_stack *s_a, t_stack *s_b)
 {
